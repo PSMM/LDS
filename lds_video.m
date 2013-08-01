@@ -21,7 +21,7 @@ height = get(vobj, 'Height');
 Y = zeros(width * height, f);
 % Yield the frames and add to the video matrix
 for i=1:f,
-    frame     = rgb2gray(read(vobj, i));
+    frame  = rgb2gray(read(vobj, i));
     Y(:,i) = reshape(frame, size(frame,1) * size(frame,2), 1);
 end
 
